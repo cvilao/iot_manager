@@ -152,7 +152,7 @@
   {
     "timestamp": "2025-08-04T09:18:00Z",
     "machine_id": "prensa-01",
-    "operator_id": "op105",
+    "operator_id": "op108",
     "batch_id": "lote-20250804-001",
     "plate_id": "placa-007",
     "recipe_id": "rev_borracha_tipoA",
@@ -202,7 +202,7 @@
   {
     "timestamp": "2025-08-05T08:20:00Z",
     "machine_id": "prensa-01",
-    "operator_id": "op102",
+    "operator_id": "op108",
     "batch_id": "lote-20250804-001",
     "plate_id": "placa-002",
     "recipe_id": "rev_borracha_tipoB",
@@ -477,7 +477,7 @@
   {
     "timestamp": "2025-08-06T09:35:00Z",
     "machine_id": "prensa-01",
-    "operator_id": "op105",
+    "operator_id": "op108",
     "batch_id": "lote-20250804-001",
     "plate_id": "placa-006",
     "recipe_id": "rev_borracha_tipoB",

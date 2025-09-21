@@ -8,15 +8,15 @@ import json
 # Define ENDPOINT, CLIENT_ID, PATH_TO_CERTIFICATE, PATH_TO_PRIVATE_KEY, PATH_TO_AMAZON_ROOT_CA_1, MESSAGE, TOPIC, and RANGE
 ENDPOINT = "a2624ur7vnlfja-ats.iot.eu-west-3.amazonaws.com"
 CLIENT_ID = "testDevice"
-PATH_TO_CERTIFICATE = "../Certificates/8bf58fa0a2b784fddedc6144e3a92f9b14f0ddcd263cf79a016013073ff9f238-certificate.pem.crt"
-PATH_TO_PRIVATE_KEY = "../Certificates/8bf58fa0a2b784fddedc6144e3a92f9b14f0ddcd263cf79a016013073ff9f238-private.pem.key"
-PATH_TO_AMAZON_ROOT_CA_1 = "../Certificates/AmazonRootCA1.pem"
+PATH_TO_CERTIFICATE = "BackEnd/iot_manager/Data/Certificates/8bf58fa0a2b784fddedc6144e3a92f9b14f0ddcd263cf79a016013073ff9f238-certificate.pem.crt"
+PATH_TO_PRIVATE_KEY = "BackEnd/iot_manager/Data/Certificates/8bf58fa0a2b784fddedc6144e3a92f9b14f0ddcd263cf79a016013073ff9f238-private.pem.key"
+PATH_TO_AMAZON_ROOT_CA_1 = "BackEnd/iot_manager/Data/Certificates/AmazonRootCA1.pem"
 TOPIC = "test/anemometer"
 MESSAGE = "Publicado no topico: " + TOPIC
 RANGE = 20
 
 # Arquivo JSON com os dados
-PATH_TO_JSON = "../Data/producao_manha_clp.json"  #
+PATH_TO_JSON = "BackEnd\iot_manager\Data\producao_manha_clp.json"  #
 
 # Carrega os registros do arquivo
 with open(PATH_TO_JSON, "r", encoding="utf-8") as f:
@@ -54,7 +54,7 @@ for i, registro in enumerate(registros, start=1):
     )
     print(f"[{i}/{len(registros)}] Publicado: {registro['timestamp']} - placa {registro['plate_id']}")
     if i < len(registros):
-        t.sleep(30)
+        t.sleep(60)
 print('Publish End')
 disconnect_future = mqtt_connection.disconnect()
 disconnect_future.result()
